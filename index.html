@@ -6,18 +6,17 @@
     <title>Abdulla Zorba - Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
     <style>
-        /* Variables for easy color changes */
+        /* Variables */
         :root {
-            --primary-blue: #336699; /* A professional blue */
-            --accent-pink: #FF69B4;  /* Hot Pink */
-            --light-blue: #ADD8E6;   /* Light Blue */
+            --primary-blue: #336699;
+            --accent-pink: #FF69B4;
+            --light-blue: #ADD8E6;
             --text-dark: #333;
             --text-light: #f4f4f4;
             --background-light: #f4f4f4;
             --background-dark: #2c3e50;
         }
 
-        /* General Body Styles */
         body {
             font-family: 'Open Sans', sans-serif;
             margin: 0;
@@ -28,7 +27,6 @@
             scroll-behavior: smooth;
         }
 
-        /* Header & Navigation */
         header {
             background-color: var(--primary-blue);
             color: var(--text-light);
@@ -46,7 +44,7 @@
             margin: 0;
             display: flex;
             justify-content: center;
-            flex-wrap: wrap; /* Allows items to wrap on small screens */
+            flex-wrap: wrap;
         }
 
         nav ul li {
@@ -68,7 +66,6 @@
             background-color: rgba(255, 255, 255, 0.1);
         }
 
-        /* Hero Section */
         #hero {
             background: linear-gradient(135deg, var(--primary-blue), var(--light-blue));
             color: var(--text-light);
@@ -78,7 +75,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            min-height: 60vh; /* Minimum height for visual impact */
+            min-height: 60vh;
             box-shadow: inset 0 -5px 10px rgba(0,0,0,0.1);
         }
 
@@ -111,11 +108,10 @@
         }
 
         .cta-button:hover {
-            background-color: #e65a9e; /* Slightly darker pink */
+            background-color: #e65a9e;
             transform: translateY(-3px);
         }
 
-        /* Sections General */
         section {
             padding: 60px 20px;
             max-width: 1200px;
@@ -143,7 +139,6 @@
             border-radius: 2px;
         }
 
-        /* About Section */
         #about p {
             font-size: 1.1em;
             text-align: center;
@@ -177,27 +172,26 @@
             font-family: 'Montserrat', sans-serif;
         }
 
-        /* Dashboard Section */
-        #powerbi, #kaggle {
-            background-color: var(--background-dark); /* Darker background for contrast */
+        #churn-work, #ecom-work {
+            background-color: var(--background-dark);
             color: var(--text-light);
             text-align: center;
         }
 
-        #powerbi h2, #kaggle h2 {
-            color: var(--text-light); /* Override default section h2 color */
+        #churn-work h2, #ecom-work h2 {
+            color: var(--text-light);
         }
 
         .dashboard-container {
             position: relative;
             width: 100%;
-            padding-bottom: 56.25%; /* 16:9 Aspect Ratio (height / width * 100) */
+            padding-bottom: 56.25%;
             height: 0;
             overflow: hidden;
-            background-color: rgba(0,0,0,0.1); /* Placeholder background */
+            background-color: rgba(0,0,0,0.1);
             border-radius: 8px;
             box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-            margin-bottom: 30px; /* Space between dashboard and any other content */
+            margin-bottom: 30px;
         }
 
         .dashboard-container iframe {
@@ -209,7 +203,7 @@
             border: 0;
         }
 
-        #kaggle .kaggle-link {
+        .kaggle-link {
             display: inline-block;
             background-color: var(--accent-pink);
             color: var(--text-light);
@@ -223,12 +217,11 @@
             box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         }
 
-        #kaggle .kaggle-link:hover {
+        .kaggle-link:hover {
             background-color: #e65a9e;
             transform: translateY(-3px);
         }
 
-        /* Footer */
         footer {
             background-color: var(--primary-blue);
             color: var(--text-light);
@@ -249,7 +242,6 @@
             color: #e65a9e;
         }
 
-        /* Responsive Design */
         @media (max-width: 768px) {
             #hero h1 {
                 font-size: 2.5em;
@@ -268,7 +260,7 @@
                 margin: 5px 0;
             }
             .skills-grid {
-                grid-template-columns: 1fr; /* Single column on small screens */
+                grid-template-columns: 1fr;
             }
         }
 
@@ -290,8 +282,8 @@
             <ul>
                 <li><a href="#hero" class="active">Home</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#powerbi">Power BI Dashboard</a></li>
-                <li><a href="#kaggle">Kaggle Notebook</a></li>
+                <li><a href="#churn-work">Churn Project</a></li>
+                <li><a href="#ecom-work">E-commerce Project</a></li>
             </ul>
         </nav>
     </header>
@@ -300,7 +292,7 @@
         <section id="hero">
             <h1>Hi, I'm Abdulla Zorba</h1>
             <p>A passionate Data Analyst specializing in creating insightful dashboards and impactful visualizations.</p>
-            <a href="#powerbi" class="cta-button">View My Work</a>
+            <a href="#churn-work" class="cta-button">View My Work</a>
         </section>
 
         <section id="about">
@@ -332,22 +324,26 @@
             </div>
         </section>
 
-        <section id="powerbi">
-            <h2>Power BI Dashboard: Churn Analysis</h2>
+        <section id="churn-work">
+            <h2>Churn Analysis Project</h2>
             <p>
-                Explore this interactive Power BI dashboard which analyzes customer churn, identifying key factors and trends that impact customer retention.
+                A complete customer churn project with data exploration in Python and an interactive dashboard in Power BI.
             </p>
             <div class="dashboard-container">
-                <iframe title="churn" width="1140" height="541.25" src="https://app.powerbi.com/reportEmbed?reportId=2b4c7699-37e6-45b6-8d30-39dec7fb0548&autoAuth=true&ctid=5cb6ce2a-2f85-4834-8578-a9a8caac5d6f" frameborder="0" allowFullScreen="true"></iframe>
+                <iframe title="Churn Dashboard" src="https://app.powerbi.com/reportEmbed?reportId=2b4c7699-37e6-45b6-8d30-39dec7fb0548&autoAuth=true&ctid=5cb6ce2a-2f85-4834-8578-a9a8caac5d6f" allowFullScreen="true"></iframe>
             </div>
+            <a href="https://www.kaggle.com/code/abdullazorba/churn-analysis" target="_blank" class="kaggle-link">View Churn EDA Notebook &rarr;</a>
         </section>
 
-        <section id="kaggle">
-            <h2>Kaggle Notebook: Churn Analysis EDA</h2>
+        <section id="ecom-work">
+            <h2>E-commerce Sales Analysis</h2>
             <p>
-                Dive into the Exploratory Data Analysis (EDA) process for the churn dataset used in the Power BI dashboard. This Kaggle notebook showcases the Python code used for data cleaning, transformation, and initial insights.
+                This project analyzes e-commerce sales using Python and Power BI. The dashboard highlights monthly sales, COGS, and profit trends, while the notebook provides full regression and EDA.
             </p>
-            <a href="https://www.kaggle.com/code/abdullazorba/churn-analysis" target="_blank" class="kaggle-link">View Kaggle Notebook &rarr;</a>
+            <div class="dashboard-container">
+                <iframe title="Ecommerce Dashboard" src="https://app.powerbi.com/reportEmbed?reportId=c641d09d-4dd2-41d8-8c37-a4c73a78eece&autoAuth=true&ctid=5cb6ce2a-2f85-4834-8578-a9a8caac5d6f" allowFullScreen="true"></iframe>
+            </div>
+            <a href="https://www.kaggle.com/code/abdullazorba/e-commerce-eda-and-regression-analysis" target="_blank" class="kaggle-link">View E-commerce EDA & Regression Notebook &rarr;</a>
         </section>
     </main>
 
@@ -357,38 +353,26 @@
     </footer>
 
     <script>
-        // Smooth scrolling for navigation
         document.querySelectorAll('nav a').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-
-                // Update active class for navigation
-                document.querySelectorAll('nav a').forEach(link => {
-                    link.classList.remove('active');
-                });
+                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+                document.querySelectorAll('nav a').forEach(link => link.classList.remove('active'));
                 this.classList.add('active');
             });
         });
 
-        // Highlight active nav link on scroll (more advanced, consider a dedicated library for this)
         window.addEventListener('scroll', () => {
             const sections = document.querySelectorAll('section');
             const navLinks = document.querySelectorAll('nav a');
-
             let current = '';
             sections.forEach(section => {
                 const sectionTop = section.offsetTop;
                 const sectionHeight = section.clientHeight;
-                // Adjust this offset if headers are sticky or elements overlap
                 if (pageYOffset >= sectionTop - sectionHeight / 3) {
                     current = section.getAttribute('id');
                 }
             });
-
             navLinks.forEach(link => {
                 link.classList.remove('active');
                 if (link.getAttribute('href').includes(current)) {
@@ -397,7 +381,6 @@
             });
         });
 
-        // Set initial active state for home link
         document.addEventListener('DOMContentLoaded', () => {
             document.querySelector('nav a[href="#hero"]').classList.add('active');
         });
